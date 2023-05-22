@@ -1,6 +1,6 @@
 package com.microservice.demo.twitter.to.kafka.service.runner;
 
-import com.microservice.demo.twitter.to.kafka.service.config.TwitterToKafkaConfigData;
+import com.microservice.demo.config.TwitterToKafkaConfigData;
 import com.microservice.demo.twitter.to.kafka.service.exception.TwitterToKafkaServiceException;
 import com.microservice.demo.twitter.to.kafka.service.listener.TwitterKafkaStatusListener;
 import org.slf4j.Logger;
