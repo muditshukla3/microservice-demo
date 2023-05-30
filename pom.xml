@@ -75,6 +75,16 @@
 			</dependency>
 			<dependency>
 				<groupId>com.ms</groupId>
+				<artifactId>kafka-admin</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ms</groupId>
+				<artifactId>kafka-producer</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ms</groupId>
 				<artifactId>common-config</artifactId>
 				<version>${project.version}</version>
 			</dependency>

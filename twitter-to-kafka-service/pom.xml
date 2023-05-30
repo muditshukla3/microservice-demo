@@ -29,6 +29,14 @@
             <groupId>com.ms</groupId>
             <artifactId>app-config-data</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.ms</groupId>
+            <artifactId>kafka-admin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ms</groupId>
+            <artifactId>kafka-producer</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
