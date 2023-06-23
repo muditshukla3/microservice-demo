@@ -5,5 +5,5 @@ spring:
     active: twitter-to-kafka
   cloud:
     config:
-      name: twitter-to-kafka-service,config-client
+      name: twitter-to-kafka,config-client
       uri: http://localhost:8888
