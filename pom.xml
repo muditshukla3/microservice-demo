@@ -18,7 +18,8 @@
 		<module>app-config-data</module>
         <module>kafka</module>
 		<module>common-config</module>
-	</modules>
+        <module>kafka-to-elastic-service</module>
+    </modules>
 	<packaging>pom</packaging>
 	<properties>
 		<spring-boot.version>2.6.7</spring-boot.version>
