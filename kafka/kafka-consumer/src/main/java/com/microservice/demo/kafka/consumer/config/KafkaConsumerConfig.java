@@ -17,8 +17,8 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
+
 @Configuration
-@EnableKafka
 public class KafkaConsumerConfig<K extends Serializable, V extends SpecificRecordBase> {
 
     private final KafkaConfigData kafkaConfigData;

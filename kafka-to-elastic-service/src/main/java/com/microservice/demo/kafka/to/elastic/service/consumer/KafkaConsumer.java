@@ -1,4 +1,4 @@
-package com.microservices.demo.kafka.to.elastic.service.consumer;
+package com.microservice.demo.kafka.to.elastic.service.consumer;
 
 import org.apache.avro.specific.SpecificRecordBase;
 

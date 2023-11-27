@@ -1,21 +1,23 @@
-package com.microservices.demo.kafka.to.elastic.service.consumer.impl;
+package com.microservice.demo.kafka.to.elastic.service.consumer.impl;
 
 import com.microservice.demo.config.KafkaConfigData;
 import com.microservice.demo.kafka.admin.client.KafkaAdminClient;
 import com.microservice.demo.kafka.avro.model.TwitterAvroModel;
-import com.microservices.demo.kafka.to.elastic.service.consumer.KafkaConsumer;
+import com.microservice.demo.kafka.to.elastic.service.consumer.KafkaConsumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.context.event.ApplicationStartedEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.config.KafkaListenerEndpointRegistry;
 import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Service
+@Component
 public class TwitterKafkaConsumer implements KafkaConsumer<Long, TwitterAvroModel> {
 
     private static final Logger log = LoggerFactory.getLogger(TwitterKafkaConsumer.class);
@@ -33,6 +35,12 @@ public class TwitterKafkaConsumer implements KafkaConsumer<Long, TwitterAvroMode
         this.kafkaConfigData = kafkaConfigData;
     }
 
+    @EventListener
+    public void onAppStarted(ApplicationStartedEvent applicationStartedEvent){
+        kafkaAdminClient.checkTopicsCreated();
+        log.info("Topics with the name {} is ready for operation:: ", kafkaConfigData.getTopicName());
+        kafkaListenerEndpointRegistry.getListenerContainer("twitterTopicListener").start();
+    }
     @Override
     @KafkaListener(id = "twitterTopicListener", topics = "${kafka-config.topic-name}")
     public void receive(@Payload List<TwitterAvroModel> messages,
