@@ -39,6 +39,18 @@
             <groupId>com.microservice.demo</groupId>
             <artifactId>kafka-model</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.microservice.demo</groupId>
+            <artifactId>elastic-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.microservice.demo</groupId>
+            <artifactId>elastic-model</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.microservice.demo</groupId>
+            <artifactId>elastic-index-client</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
