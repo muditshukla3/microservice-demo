@@ -14,10 +14,9 @@ import org.springframework.data.elasticsearch.core.query.IndexQuery;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
-@ConditionalOnProperty(name = "elastic-config.is-repository", havingValue = "false")
+@ConditionalOnProperty(name = "elastic-config.is-repository", havingValue = "true")
 public class TwitterElasticIndexClient implements ElasticIndexClient<TwitterIndexModel> {
 
     private static final Logger log = LoggerFactory.getLogger(TwitterElasticIndexClient.class);
