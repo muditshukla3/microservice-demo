@@ -1,0 +1,72 @@
+2023-11-26 22:37:22 INFO  [main] o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2023-11-26 22:37:23 INFO  [main] o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=kafka-to-elastic,config-client, profiles=[kafka-to-elastic], label=null, version=3dee77e5f1affe6de65cdd398736874798878c26, state=null
+2023-11-26 22:37:23 INFO  [main] o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/muditshukla3/config-server-repository/config-client-kafka-to-elastic.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/muditshukla3/config-server-repository/config-client.yml'}]
+2023-11-26 22:37:23 INFO  [main] c.m.d.k.t.e.s.KafkaToElasticServiceApplication - The following 1 profile is active: "kafka-to-elastic"
+2023-11-26 22:37:24 INFO  [main] o.s.cloud.context.scope.GenericScope - BeanFactory id=f40cd165-e789-3fa2-bedd-83f1dd236a5b
+2023-11-26 22:37:24 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$7c2bfbd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-11-26 22:37:25 INFO  [main] o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-26 22:37:25 INFO  [main] o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.1
+2023-11-26 22:37:25 INFO  [main] o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8e30984f43e64d8b
+2023-11-26 22:37:25 INFO  [main] o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701018445312
+2023-11-26 22:37:25 WARN  [kafka-admin-client-thread | adminclient-1] o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (localhost/127.0.0.1:29092) could not be established. Broker may not be available.
+2023-11-26 22:37:26 INFO  [main] o.s.b.w.e.netty.NettyWebServer - Netty started on port 8182
+2023-11-26 22:37:26 INFO  [main] c.m.d.k.t.e.s.KafkaToElasticServiceApplication - Started KafkaToElasticServiceApplication in 4.637 seconds (JVM running for 6.762)
+2023-11-26 22:40:48 INFO  [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2023-11-26 22:40:48 INFO  [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-11-26 22:40:48 INFO  [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-26 22:40:48 INFO  [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.metrics.Metrics - Metrics reporters closed
