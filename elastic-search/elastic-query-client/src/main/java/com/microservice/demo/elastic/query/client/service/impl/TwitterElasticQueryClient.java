@@ -16,7 +16,6 @@ import org.springframework.data.elasticsearch.core.query.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class TwitterElasticQueryClient implements ElasticQueryClient<TwitterIndexModel> {
@@ -40,13 +39,14 @@ public class TwitterElasticQueryClient implements ElasticQueryClient<TwitterInde
 
     @Override
     public TwitterIndexModel getIndexModelById(String id) {
+        log.info("id {}", id);
         Query query = elasticQueryUtil.getSearchQueryById(id);
         SearchHit<TwitterIndexModel> searchHit = elasticsearchOperations.searchOne(query, TwitterIndexModel.class,
                 IndexCoordinates.of(elasticConfigData.getIndexName()));
         if(searchHit == null){
             throw new ElasticQueryClientException("No document found at elasticsearch with id "+id);
         }
-        log.info("Document with id {} retreived successfully", searchHit.getId());
+        log.info("Document with id {} retrieved successfully with text {}", searchHit.getId(), searchHit.getContent().getText());
         return searchHit.getContent();
     }
 
