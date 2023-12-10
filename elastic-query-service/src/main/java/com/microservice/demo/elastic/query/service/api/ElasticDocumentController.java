@@ -7,6 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
 @RestController
@@ -28,14 +30,14 @@ public class ElasticDocumentController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ElasticQueryServiceResponse> getDocumentById(@PathVariable String id){
+    public ResponseEntity<ElasticQueryServiceResponse> getDocumentById(@PathVariable @NotEmpty String id){
         ElasticQueryServiceResponse response = queryService.getDocumentById(id);
         log.info("ElasticSearch returned document with id {}", id);
         return ResponseEntity.ok(response);
     }
 
     @PostMapping("/get-documents-by-text")
-    public ResponseEntity<List<ElasticQueryServiceResponse>> getDocumentsByText(@RequestBody ElasticQueryServiceRequest request){
+    public ResponseEntity<List<ElasticQueryServiceResponse>> getDocumentsByText(@RequestBody @Valid ElasticQueryServiceRequest request){
         List<ElasticQueryServiceResponse> response = queryService.getDocumentByText(request.getText());
         ElasticQueryServiceResponse elasticQueryServiceResponse = ElasticQueryServiceResponse
                                                                         .builder()
