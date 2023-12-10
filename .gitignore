@@ -42,3 +42,7 @@ src/main/resources/public/*
 config-server-repository/*
 
 docker-compose/volumes/*
+
+kafka-to-elastic-service/logs/*
+elastic-query-service/logs/*
+config-server/logs/*
