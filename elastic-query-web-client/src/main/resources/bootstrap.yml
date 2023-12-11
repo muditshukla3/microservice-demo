@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: elastic-query-web-client
+  profiles:
+    active: elastic-query-web
+  cloud:
+    config:
+      name: elastic-query-web,config-client
+      uri: http://localhost:8888

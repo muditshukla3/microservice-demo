@@ -22,6 +22,7 @@
         <module>elastic-search</module>
         <module>common-util</module>
         <module>elastic-query-service</module>
+        <module>elastic-query-web-client</module>
     </modules>
 	<packaging>pom</packaging>
 	<properties>
@@ -222,6 +223,16 @@
 				<groupId>org.springdoc</groupId>
 				<artifactId>springdoc-openapi-ui</artifactId>
 				<version>${springdoc-openapi-ui.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-thymeleaf</artifactId>
+				<version>${spring-boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.thymeleaf.extras</groupId>
+				<artifactId>thymeleaf-extras-springsecurity5</artifactId>
+				<version>3.0.4.RELEASE</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
