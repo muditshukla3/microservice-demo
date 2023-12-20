@@ -1,10 +1,9 @@
-package com.microservice.demo.elastic.query.service.transformer;
+package com.microservice.demo.elastic.query.service.common.transformer;
 
 import com.microservice.demo.elastic.model.index.impl.TwitterIndexModel;
-import com.microservice.demo.elastic.query.service.model.ElasticQueryServiceResponse;
+import com.microservice.demo.elastic.query.service.common.model.ElasticQueryServiceResponse;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 

@@ -1,6 +1,6 @@
-package com.microservice.demo.elastic.query.web.client.api.error.handler;
+package com.microservice.demo.elastic.query.web.client.common.api.error.handler;
 
-import com.microservice.demo.elastic.query.web.client.model.ElasticQueryWebClientRequest;
+import com.microservice.demo.elastic.query.web.client.common.model.ElasticQueryWebClientRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.AccessDeniedException;

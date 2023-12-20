@@ -1,18 +1,19 @@
-package com.microservice.demo.elastic.query.service.model;
+package com.microservice.demo.elastic.query.web.client.common.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotEmpty;
+import java.time.LocalDateTime;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ElasticQueryServiceRequest {
+public class ElasticQueryWebClientResponse {
     private String id;
-    @NotEmpty
+    private Long userId;
     private String text;
+    private LocalDateTime createdAt;
 }

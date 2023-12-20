@@ -1,9 +1,9 @@
 package com.microservice.demo.elastic.query.web.client.service.impl;
 
 import com.microservice.demo.config.ElasticQueryWebClientConfigData;
-import com.microservice.demo.elastic.query.web.client.exception.ElasticQueryClientException;
-import com.microservice.demo.elastic.query.web.client.model.ElasticQueryWebClientRequest;
-import com.microservice.demo.elastic.query.web.client.model.ElasticQueryWebClientResponse;
+import com.microservice.demo.elastic.query.web.client.common.exception.ElasticQueryClientException;
+import com.microservice.demo.elastic.query.web.client.common.model.ElasticQueryWebClientRequest;
+import com.microservice.demo.elastic.query.web.client.common.model.ElasticQueryWebClientResponse;
 import com.microservice.demo.elastic.query.web.client.service.ElasticQueryWebClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;

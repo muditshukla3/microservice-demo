@@ -1,7 +1,7 @@
 package com.microservice.demo.elastic.query.service.api;
 
-import com.microservice.demo.elastic.query.service.model.ElasticQueryServiceRequest;
-import com.microservice.demo.elastic.query.service.model.ElasticQueryServiceResponse;
+import com.microservice.demo.elastic.query.service.common.model.ElasticQueryServiceRequest;
+import com.microservice.demo.elastic.query.service.common.model.ElasticQueryServiceResponse;
 import com.microservice.demo.elastic.query.service.model.ElasticQueryServiceResponseV2;
 import com.microservice.demo.elastic.query.service.service.ElasticQueryService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
+
 import java.util.List;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;

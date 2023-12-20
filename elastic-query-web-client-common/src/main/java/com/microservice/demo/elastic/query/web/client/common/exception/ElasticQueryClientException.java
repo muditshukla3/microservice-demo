@@ -1,4 +1,4 @@
-package com.microservice.demo.elastic.query.web.client.exception;
+package com.microservice.demo.elastic.query.web.client.common.exception;
 
 public class ElasticQueryClientException extends RuntimeException{
 

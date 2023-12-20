@@ -2,10 +2,9 @@ package com.microservice.demo.elastic.query.service.service.impl;
 
 import com.microservice.demo.elastic.model.index.impl.TwitterIndexModel;
 import com.microservice.demo.elastic.query.client.service.ElasticQueryClient;
-import com.microservice.demo.elastic.query.service.model.ElasticQueryServiceResponse;
+import com.microservice.demo.elastic.query.service.common.model.ElasticQueryServiceResponse;
 import com.microservice.demo.elastic.query.service.model.assembler.ElasticQueryServiceResponseModelAssembler;
 import com.microservice.demo.elastic.query.service.service.ElasticQueryService;
-import com.microservice.demo.elastic.query.service.transformer.ElasticToResponseModelTransformer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
