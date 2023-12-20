@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: reactive-elastic-query-service
+  profiles:
+    active: reactive-elastic-query
+  cloud:
+    config:
+      name: reactive-elastic-query,config-client
+      uri: http://localhost:8888
