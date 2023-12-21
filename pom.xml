@@ -26,7 +26,8 @@
         <module>elastic-query-service-common</module>
 		<module>elastic-query-web-client-common</module>
 		<module>reactive-elastic-query-service</module>
-	</modules>
+        <module>reactive-elastic-query-web-client</module>
+    </modules>
 	<packaging>pom</packaging>
 	<properties>
 		<spring-boot.version>2.6.7</spring-boot.version>
