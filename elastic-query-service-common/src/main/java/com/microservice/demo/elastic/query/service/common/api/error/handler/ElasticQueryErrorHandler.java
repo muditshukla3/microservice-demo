@@ -36,6 +36,7 @@ public class ElasticQueryErrorHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handle(Exception e){
+        e.printStackTrace();
         log.error("Exception occurred {}", e.getMessage());
         return ResponseEntity.internalServerError().body("Server error occurred");
     }
